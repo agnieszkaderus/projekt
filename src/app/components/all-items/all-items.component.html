@@ -1,0 +1,35 @@
+
+<div class="table-container">
+  <h1> List </h1>
+  <button (click)="openModal()">modal </button>
+  <table class="item-table">
+  <thead>
+  <tr>
+    <th> Image </th>
+    <th> Name </th>
+    <th> Price </th>
+    <th> Type </th>
+    <th> Text </th>
+    <th> Action </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of items$">
+    <td> <img [src]="item.image" class="table-img"> </td>
+    <td> {{item.name}}</td>
+    <td> {{item.price}}</td>
+    <td> {{item.type}}</td>
+    <td> {{item.text}}</td>
+    <td> <button class="delete-button" (click)="delete(item.id)" (click)="openModal()"> delete </button> </td>
+  </tr>
+  </tbody>
+</table>
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <h3>Produkt został pomyślnie usunięty.</h3>
+      <button (click)="closeModal()">OK</button>
+    </div>
+  </div>
+</div>
+
+

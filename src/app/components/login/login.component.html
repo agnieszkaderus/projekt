@@ -1,0 +1,19 @@
+<div class="login-page">
+  <div class="all">
+    <div class="form-box">
+      <form action="post" autocomplete="off" method="POST" class="form">
+        <h1 class="title"> LOGIN </h1>
+        <input [(ngModel)]="credentials.login" type="text" class="form-input"
+               name="username" placeholder="Nazwa" title="Login">
+
+      <input [(ngModel)]="credentials.password" type="password" class="form-input"
+             name="password" placeholder="Hasło" title="Password">
+
+
+       <button (click)="signIn()" class="submit-button" type="submit" title="Przycisk zaloguj">
+      Sign in
+    </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <ng-container *ngIf="items$.length > 0">
+    <div class="cards">
+    <div class=""  *ngFor="let item of items$; let i = index" [class.active]="i === activeIndex">
+      <app-card [image]="item.image" [title]="item.name" [description]="item.text"></app-card>
+    </div>
+    </div>
+  </ng-container>
+</div>

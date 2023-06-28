@@ -1,0 +1,26 @@
+<div class="sign-up-page">
+  <div class="all">
+    <div class="form-box">
+      <form  class="form" action="post" autocomplete="off" method="POST">
+        <h1 class="title"> SIGN UP </h1>
+        <input type="email" class="form-input" name="emailid" id="emailid" placeholder="email"
+               value="" [(ngModel)]="credentials.email">
+
+        <input type="password" class="form-input" name="password" id="password"
+               placeholder="password (5-15)" value="" [(ngModel)]="credentials.password">
+
+        <input type="password" class="form-input" name="cpassword" id="cpassword"
+               placeholder="re-password" value="">
+
+        <input type="text" class="form-input" name="mem_name" id="mem_name" placeholder="name" value=""
+               [(ngModel)]="credentials.name">
+
+
+        <button (click)="create()" class="submit-button" type="submit" title="Przycisk zaloguj">
+          Sign in
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<p>signup works!</p>

@@ -1,0 +1,21 @@
+<div class="notebooks-bg">
+  <div class="carousel-n">
+    <ng-container *ngIf="items$.length>0">
+    <div *ngFor="let item of items$; let i = index" [class.active]="i === activeIndex">
+      <div class="carousel-n-item"  >
+        <img class="n-img" [src]="item.image">
+        <div class="n-title">
+          <h2>{{item.name}}</h2>
+          <h4> {{item.text}}</h4>
+        </div>
+      </div>
+    </div>
+    </ng-container>
+  </div>
+
+  <div class="cards">
+    <div class=""  *ngFor="let item of items$; let i = index" [class.active]="i === activeIndex">
+      <app-card [image]="item.image" [title]="item.name" [description]="item.text"></app-card>
+    </div>
+  </div>
+</div>

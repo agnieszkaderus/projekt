@@ -1,0 +1,62 @@
+<div class="phones-bg">
+  <div class="carousel">
+    <ng-container *ngIf="items$.length > 0">
+      <div class="carousel-item"  *ngFor="let item of items$; let i = index" [class.active]="i === activeIndex">
+        <div *ngIf="item.type==='phone'">
+         <img class='img1' [src]="item.image" alt="Slide {{ i }}">
+          <div class="shadow">
+            <h1 class="item-name"> {{item.name}}</h1>
+          </div>
+        </div>
+        <p> {{activeIndex}}</p>
+      </div>
+    </ng-container>
+  </div>
+
+
+  <h1>  </h1>
+  <h1>  </h1>
+<!--  <div class="cards">-->
+<!--    <div class=""  *ngFor="let item of items$; let i = index" [class.active]="i === activeIndex">-->
+<!--    <app-card [image]="item.image" [title]="item.name" [description]="item.text"></app-card>-->
+<!--   </div>-->
+<!--  </div>-->
+  <h1>  </h1>
+  <div class="phones" *ngFor="let item of items$">
+    <div class="one-phone">
+      <img class="one-phone-photo" [src]="item.image" >
+      <div class="one-phone-text">
+        <p> {{item.name}}</p>
+        <p> Cena: {{item.price}} </p>
+        {{item.text}}
+        <p><button class="one-phone-button" (click)="goToItem(item.id)" > SPRAWDŹ </button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-details" id="item-details" *ngIf="selectedItemId">
+    <img [src]="selectedItem.image" alt="{{selectedItem.name}}">
+    <div class="item-details-shadow">
+      <div class="item-details-text">
+        <h2 class="item-details-name">{{selectedItem.name}}</h2>
+        <p class="item-details-name">{{selectedItem.text}}</p>
+        <p class="item-details-name">Cena: {{selectedItem.price}}</p>
+        <p class="item-details-name">Typ: {{selectedItem.type}}</p>
+        <p class="edit-button">
+          <i class="fas fa-trash-alt"></i>
+        </p>
+        <p class="delete-button">
+          <i class="fas fa-edit"></i>
+        </p>
+      </div>
+
+    <p>{{selectedItem.description}}</p>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+

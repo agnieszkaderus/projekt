@@ -1,0 +1,49 @@
+
+
+<nav class="navbar-items" [ngStyle]="navbg" >
+  <h3> MENU </h3>
+
+<ul class="nav-menu">
+
+  <li *ngIf="!authService.isLoggedIn()" class="nav-links">
+    <a class="nav-link" routerLink="/"> Home </a>
+    <a  *ngIf="!isSearchExpanded" class="nav-link" (click)="expandSearch()">Search</a>
+
+    <div *ngIf="isSearchExpanded" class="search-container">
+      <input type="text" placeholder="Search..." class="search-input">
+      <a  *ngIf="isSearchExpanded" class="nav-link" (click)="expandSearch()">Search</a>
+    </div>
+    <a class="nav-link" routerLink="/login"> Login </a>
+    <a class="nav-link" routerLink="/signup"> Signup </a>
+  </li>
+
+  <li *ngIf="authService.isLoggedIn()" class="nav-links">
+    <a class="nav-link" routerLink="/"> Home </a>
+    <a class="nav-link" routerLink="/all"> All Products </a>
+    <a class="nav-link" routerLink="/add-product"> Add Product </a>
+    <a class="nav-link" routerLink="/" (click)="signOut()"> Logout </a>
+  </li>
+</ul>
+<!--  <div class="container-fluid">-->
+<!--    <a class="navbar-brand" routerLink="">TYTUL</a>-->
+<!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--      <ul class="navbar-nav ms-auto">-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link active" aria-current="page" routerLink="">Home</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" routerLink="searchbar">Search</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" routerLink="login">Login</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" routerLink="signup">Signup</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+</nav>

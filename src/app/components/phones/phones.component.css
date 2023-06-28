@@ -1,0 +1,210 @@
+.phones-bg{
+  background-color: transparent;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 82vh;
+  overflow: hidden;
+  margin-top: 0px;
+  box-shadow: 0 5px 15px grey;
+  /*background-color: red;*/
+}
+.shadow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  justify-content: center;
+  /*z-index: 1000;*/
+}
+
+.carousel-item {
+  /*position: absolute;*/
+  top: 0;
+  width: 100vw;
+  height: 82vh;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.img1{
+  /*position: relative;*/
+  width: 100vw;
+  height: 82vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+
+  /*align-self: center;*/
+}
+.item-name{
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  z-index: 999;
+}
+
+.phones{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  flex-wrap: wrap; /* dodanie wrap */
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  margin: 0;
+  /*box-shadow: 0px 5px 10px grey;*/
+  margin-bottom: 10px;
+
+}
+.one-phone{
+  width: 100vw;
+  height: 40vh;
+  /*background-color: green;*/
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.38);
+
+}
+.one-phone-photo:hover{
+  box-shadow: 0px 5px 10px grey;
+}
+.one-phone-photo{
+  width: 40vw;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  z-index:0;
+  text-align: center;
+  border-radius: 10px;
+  margin: 6px;
+  object-fit: cover;
+}
+.one-phone-text{
+  width: 35vw;
+  height: 100%;
+  /*background-color: darkseagreen;*/
+  position: relative;
+  margin: 6px;
+  display: inline-block;
+  z-index:0;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
+.one-phone-button {
+  align-items: center;
+  margin-top: 20px;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  box-shadow: rgba(45, 35, 66, .4) 0 1px 1px, rgba(45, 35, 66, .3) 0 1px 1px -1px, rgba(58, 65, 111, .5) 0 -1px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 50px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  width:200px;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: "Spartan", sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+
+.one-phone-button:hover {
+  box-shadow: rgb(132, 201, 239) 0 2px 2px, rgb(132, 201, 239) 0 3px 3px -3px, #9294a1 0 -3px 0 inset;
+  transform: translateY(-1px);
+}
+
+.one-phone-button:active {
+  box-shadow: #2e2e34 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.cards{
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  overflow-x: auto;
+  /*flex-wrap: wrap; !* dodanie wrap *!*/
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+}
+.item-details {
+  position: relative;
+}
+
+.item-details img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+}
+
+.item-details-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.item-details-name {
+  position: relative;
+  margin-left: 10vw;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+}
+.item-details-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.delete-button{
+  width: 100px;
+  height: 100px;
+  color: black;
+}
+.edit-button{
+  width: 100px;
+  height: 100px;
+}
